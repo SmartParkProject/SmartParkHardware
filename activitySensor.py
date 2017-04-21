@@ -24,7 +24,7 @@ while true:
             while GPIO.input(inPin):
                 time.sleep(.2)#Need to add a catch in here so that if the button stays pressed it won't continue
 
-    if !GPIO.input(inPin): #Not sure if syntax is correct
+    if !GPIO.input(inPin):
         count = 0
 
             
@@ -37,7 +37,7 @@ while true:
         
         try:
             url = 'https://smartparkproject.tk/api/statistics/traffic'
-            payload = {'cars': cars}
+            payload = {'cars': cars, 'lot':1}
 
             r = requests.post(url, json=payload)
             #Send data and zero everything else out

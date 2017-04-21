@@ -44,7 +44,7 @@ while 1:
         try:
             print('Sending Data')
             url = 'https://smartparkproject.tk/api/statistics/traffic'
-            payload = {'cars': cars}
+            payload = {'cars': cars, 'lot':1}
 
             r = requests.post(url, json=payload)
             #Send data and zero everything else out
